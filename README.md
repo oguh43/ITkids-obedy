@@ -1,2 +1,2 @@
 # ITkids-obedy
-A frontend to the electron app
+A frontend to the main repository, exposing only the compiled app :)
