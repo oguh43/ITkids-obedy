@@ -1,0 +1,55 @@
+{
+  "name": "ITkids_obedy_updater",
+  "productName": "ITkids obedy launcher",
+  "version": "1.0.0",
+  "description": "The launcher for the ITkids obedy app.",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "oguh43 <hugo.bohacsek@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^11.1.0",
+    "electron-builder": "^23.1.0"
+  },
+  "dependencies": {
+    "uaup-js": "latest"
+  },
+  "build": {
+		"linux": {
+			"icon": "icon.png",
+			"category": "Utility",
+			"target": [
+				"deb",
+				"zip"
+			]
+		},
+		"win": {
+			"icon": "icon.ico",
+			"target": [
+				"portable",
+				"zip"
+			]
+		},
+		"executableName": "ITkids obedy",
+		"files": [
+			"**/*",
+			"!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+			"!**/node_modules/*/{test,__tests__,tests,powered-test,example,examples}",
+			"!**/node_modules/*.d.ts",
+			"!**/node_modules/.bin",
+			"!**/*.{iml,o,hprof,orig,pyc,pyo,rbc,swp,csproj,sln,xproj}",
+			"!.editorconfig",
+			"!**/._*",
+			"!**/{.DS_Store,.git,.hg,.svn,CVS,RCS,SCCS,.gitignore,.gitattributes}",
+			"!**/{__pycache__,thumbs.db,.flowconfig,.idea,.vs,.nyc_output}",
+			"!**/{appveyor.yml,.travis.yml,circle.yml}",
+			"!**/{npm-debug.log,yarn.lock,.yarn-integrity,.yarn-metadata.json}",
+			"!**/{package-lock.json,.npmrc,.yarnrc,.yarnclean,.yarn-error.log}",
+			"!**/*.php"
+		]
+	}
+}
