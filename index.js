@@ -16,6 +16,7 @@ function createWindow() {
 
     win.setTitle('ITkids obedy');
     win.loadFile('./index.html');
+    //win.webContents.openDevTools();
 }
 
 app.whenReady().then(createWindow);

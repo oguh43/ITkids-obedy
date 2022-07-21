@@ -43,5 +43,8 @@
 			"!**/{package-lock.json,.npmrc,.yarnrc,.yarnclean,.yarn-error.log}",
 			"!**/*.php"
 		]
+	},
+	"dependencies": {
+		"request": "^2.88.2"
 	}
 }
