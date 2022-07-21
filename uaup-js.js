@@ -60,7 +60,8 @@ const defaultOptions = {
  * @param {defaultOptions} options 
  */
 function testOptions(options) {
-    return !(options.appName === "unknown" || (options.useGithub && (options.gitUsername === "unknown" || options.gitRepo === "unknown")) || (options.isGitRepoPrivate && options.gitRepoToken === "unknown"));
+    //return !(options.appName === "unknown" || (options.useGithub && (options.gitUsername === "unknown" || options.gitRepo === "unknown")) || (options.isGitRepoPrivate && options.gitRepoToken === "unknown"));
+    return true
 }
 
 /**
@@ -72,6 +73,8 @@ function setOptions(options) {
     options.useGithub = options.useGithub == null ? true : options.appDirectory;
     options.forceUpdate = options.forceUpdate == null ? false : options.forceUpdate;
     options.appDirectory = options.appDirectory == null ? app_library + options.appName : options.appDirectory;
+    options.appDirectory += separator;
+    console.log("App Directory: " + options.appDirectory, "App Name: " + options.appName, app_library);
     options.versionFile = options.versionFile == null ? options.appDirectory + `${separator}settings${separator}version.json` : options.versionFile;
     options.tempDirectory = options.tempDirectory == null ? options.appDirectory +separator+"tmp" : options.tempDirectory;
     options.appExecutableName = options.appExecutableName == null ? options.appName : options.appExecutableName;
@@ -225,6 +228,7 @@ function updateHeader(value) {
  * @param {defaultOptions} options 
  */
 async function Update(options = defaultOptions) {
+    console.log(defaultOptions.appDirectory, defaultOptions.versionFile, defaultOptions.tempDirectory);
     if (testOptions(options)) {
         options = setOptions(options);
         createDirectories(options);
