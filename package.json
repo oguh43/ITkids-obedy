@@ -1,37 +1,29 @@
 {
-  "name": "ITkids_obedy_updater",
-  "productName": "ITkids obedy launcher",
-  "version": "1.0.0",
-  "description": "The launcher for the ITkids obedy app.",
-  "main": "index.js",
-  "scripts": {
-    "start": "electron .",
-    "build": "electron-builder"
-  },
-  "keywords": [],
-  "author": "oguh43 <hugo.bohacsek@gmail.com>",
-  "license": "ISC",
-  "devDependencies": {
-    "electron": "^11.1.0",
-    "electron-builder": "^23.1.0"
-  },
-  "dependencies": {
-    "uaup-js": "latest"
-  },
-  "build": {
+	"name": "ITkids_obedy_updater",
+	"productName": "ITkids obedy launcher",
+	"version": "1.0.0",
+	"description": "The launcher for the ITkids obedy app.",
+	"main": "index.js",
+	"scripts": {
+		"start": "electron .",
+		"build": "electron-builder"
+	},
+	"keywords": [],
+	"author": "oguh43 <hugo.bohacsek@gmail.com>",
+	"license": "ISC",
+	"devDependencies": {
+		"electron": "^11.1.0",
+		"electron-builder": "^23.1.0"
+	},
+	"build": {
+		"directories": {
+			"output": "build"
+		},
 		"linux": {
-			"icon": "icon.png",
+			"icon": "build/256x256.png",
 			"category": "Utility",
 			"target": [
-				"deb",
-				"zip"
-			]
-		},
-		"win": {
-			"icon": "icon.ico",
-			"target": [
-				"portable",
-				"zip"
+				"deb"
 			]
 		},
 		"executableName": "ITkids obedy",
