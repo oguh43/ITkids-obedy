@@ -2,7 +2,6 @@ directories:
   output: build
   buildResources: build
 linux:
-  icon: build/256x256.png
   category: Utility
   target:
     - deb
