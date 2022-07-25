@@ -106,3 +106,5 @@ dist
 dist/
 build/linux-unpacked
 build/ITkids_obedy_updater_1.0.0_amd64.deb
+build/win-unpacked
+build/ITkids obedy launcher Setup 1.0.0.exe

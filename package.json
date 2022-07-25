@@ -6,7 +6,7 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "electron .",
-		"build": "electron-builder"
+		"build": "electron-builder -wl"
 	},
 	"keywords": [],
 	"author": "oguh43 <hugo.bohacsek@gmail.com>",
@@ -23,6 +23,11 @@
 			"category": "Utility",
 			"target": [
 				"deb"
+			]
+		},
+		"win":{
+			"target": [
+				"nsis"
 			]
 		},
 		"executableName": "ITkids obedy",

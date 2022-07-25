@@ -5,6 +5,9 @@ linux:
   category: Utility
   target:
     - deb
+win:
+  target:
+    - nsis
 executableName: ITkids obedy
 files:
   - filter:
