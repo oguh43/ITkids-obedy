@@ -38,8 +38,8 @@ const defaultOptions = {
     appExecutableName: this.appName + "",
 
     appDirectory: app_library + this.appName,
-    versionFile: this.appDirectory + "/settings/version.json",
-    tempDirectory: this.appDirectory + "/tmp",
+    versionFile: this.appDirectory + `${separator}settings${separator}version.json`,
+    tempDirectory: this.appDirectory + `${separator}tmp"`,
 
     progressBar: null,
     label: null,
