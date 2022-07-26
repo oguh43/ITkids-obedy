@@ -8,4 +8,4 @@ echo "deb [arch=amd64 trusted=yes] http://192.168.0.50:8000/apt-repo stable main
 apt-get update
 apt-get install itkids-obedy-updater -y
 echo "Done!"
-exit 1
+exit 0
