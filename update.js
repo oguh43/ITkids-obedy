@@ -25,7 +25,7 @@ let updateOptions = {
 };
 if (process.platform === "win32") {
     updateOptions.appName = "ITkids_obedy_win32"
-    updateOptions.appExecutableName = "itkids_obedy.exe"
+    updateOptions.appExecutableName = "ITkids obedy.exe"
 }else{
     updateOptions.appName = "ITkids_obedy_linux"
     updateOptions.appExecutableName = "itkids_obedy"
