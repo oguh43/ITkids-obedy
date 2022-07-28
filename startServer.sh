@@ -11,7 +11,7 @@ if nc -w1 -z 192.168.0.50 8000; then
   exit 0
 else
   echo "Port is not listening"
-  /usr/bin/sshpass -p ${passw[$HOSTNAME]} ssh -o StrictHostKeyChecking=no "local" "cd home/localweb && python3 startServer.py"
+  /usr/bin/sshpass -p ${passw[$HOSTNAME]} ssh "student02@local" "cd home/localweb && python3 startServer.py"
   echo "Done!"
   exit 0
 fi
